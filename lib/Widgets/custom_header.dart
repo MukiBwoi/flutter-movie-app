@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:movie_app/constant/colors.dart';
-import 'package:movie_app/constant/textstyles.dart';
 
 class CustomHeader extends StatelessWidget {
   const CustomHeader({
@@ -14,7 +13,6 @@ class CustomHeader extends StatelessWidget {
         foregroundColor: kRed,
         backgroundImage: AssetImage('assets/avatar.png'),
       ),
-      
       accountName: Text("Emma Michel", ),
       accountEmail: Text("emmamichel@gmail.com"),
     );

@@ -7,14 +7,20 @@ class CustomListView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-   
     return SizedBox(
       height: 500,
       child: ListView.builder(
         itemCount: 7,
         itemBuilder: (BuildContext context, int index) {
-          return  DrawerListTile(
-            icon:DrawerItemList.iconList[index],
+          return DrawerListTile(
+            ontap: () {
+              // Navigator.push(context, MaterialPageRoute(builder: (_) {
+              //   return DrawerItemList.routeList[index];
+              // }));
+
+              Navigator.pushNamed(context, DrawerItemList.routeList[index]);
+            },
+            icon: DrawerItemList.iconList[index],
             text: DrawerItemList.titleList[index],
           );
         },
